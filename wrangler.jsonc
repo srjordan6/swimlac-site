@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "swimlac-site",
+  "compatibility_date": "2026-08-27",
+
+  // Static site. No Worker script, Cloudflare serves ./dist directly.
+  "assets": {
+    "directory": "./dist",
+
+    // The old GoMotion URLs have NO trailing slash (/page/about/about-lac).
+    // "drop-trailing-slash" serves them at exactly that path and redirects any
+    // trailing-slash variant onto it. Do not change this without re-running
+    // `npm run verify` — it is what keeps the 38 legacy slugs intact.
+    "html_handling": "drop-trailing-slash",
+
+    // Serve dist/404.html on a miss instead of a bare Cloudflare error.
+    "not_found_handling": "404-page"
+  }
+}
