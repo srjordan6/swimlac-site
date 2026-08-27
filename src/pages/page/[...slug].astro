@@ -1,0 +1,91 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { crumbsFor, navLabelFor, siblingsFor, GOMOTION } from '../../consts';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages
+    .filter((p) => p.id !== 'home') // home has its own route
+    .map((p) => ({ params: { slug: p.id }, props: { page: p } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const path = `/page/${page.id}`;
+const crumbs = crumbsFor(path);
+const heading = navLabelFor(path) ?? page.data.title;
+const sibs = siblingsFor(path).filter((s) => s.href !== path);
+const isCalendar = page.id === 'events';
+---
+<Base title={page.data.title} description={page.data.description} path={path}>
+  <header class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        {crumbs.map((c, i) => (
+          <>
+            {i > 0 && <i aria-hidden="true">/</i>}
+            {i === crumbs.length - 1
+              ? <span aria-current="page">{c.label}</span>
+              : <a href={c.href}>{c.label}</a>}
+          </>
+        ))}
+      </nav>
+      <h1>{page.data.title}</h1>
+      {heading !== page.data.title && <p class="subhead">{heading}</p>}
+    </div>
+  </header>
+
+  <div class="pagebody">
+    <div class="wrap layout">
+      <article class="prose">
+        {page.data.status === 'empty' && (
+          <p class="notice">
+            This page had no static copy on the old site.
+            {isCalendar ? (
+              <> The events calendar is generated inside GoMotion, so it lives there:
+                <a href={GOMOTION.calendar} target="_blank" rel="noopener noreferrer"> open the LAC calendar</a>.</>
+            ) : (
+              <> Add the copy in <code>src/content/pages/{page.id}.md</code>.</>
+            )}
+          </p>
+        )}
+        <Content />
+      </article>
+
+      {sibs.length > 0 && (
+        <aside class="sidenav" aria-label="More in this section">
+          <h2>More in this section</h2>
+          <ul>
+            {sibs.map((s) => (
+              <li>
+                <a href={s.href} {...(s.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{s.label}</a>
+              </li>
+            ))}
+          </ul>
+          <a class="btn btn-hot btn-sm side-cta" href="/page/join-lac/try-out--placement">
+            <span class="lbl">Book a tryout</span><span class="lbl arrow">&rarr;</span>
+          </a>
+        </aside>
+      )}
+    </div>
+  </div>
+</Base>
+
+<style>
+.subhead{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);margin-top:16px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 268px;min-width:0;gap:clamp(28px,5vw,72px);align-items:start}
+.sidenav{position:sticky;top:calc(var(--nav-h) + 28px);border:1px solid var(--line);
+  background:rgba(13,1,4,.62);backdrop-filter:blur(10px);padding:22px 20px}
+.sidenav h2{font-family:var(--f-mono);font-size:10px;font-weight:400;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ash);margin:0 0 14px}
+.sidenav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.sidenav a{display:block;padding:9px 12px;font-size:13.5px;line-height:1.35;color:#e6dcdd;
+  border-left:2px solid transparent;transition:background .22s ease,color .22s ease,border-color .22s ease}
+.sidenav a:hover{background:rgba(187,0,0,.18);color:#fff;border-left-color:var(--hot)}
+.side-cta{margin-top:18px;width:100%;justify-content:center}
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidenav{position:static;order:2}
+}
+</style>

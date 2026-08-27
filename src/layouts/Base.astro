@@ -1,0 +1,168 @@
+---
+import { SITE } from '../consts';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Water from '../components/Water.astro';
+import '../styles/global.css';
+import '../styles/header.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** canonical path, e.g. /page/about/about-lac */
+  path: string;
+  mode?: 'hero' | 'ambient';
+  /** page-level override; site-level noindex still wins while SITE.indexable is false */
+  noindex?: boolean;
+}
+const { title, description, path, mode = 'ambient', noindex = false } = Astro.props;
+const canonical = new URL(path, SITE.url).href;
+const fullTitle = path === '/page/home' ? `${SITE.name} | Competitive Swim Team & Swim Lessons in North Texas` : `${title} | ${SITE.name}`;
+const desc = description ?? SITE.mission;
+const block = noindex || !SITE.indexable;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={desc} />
+  <link rel="canonical" href={canonical} />
+  {block && <meta name="robots" content="noindex,nofollow" />}
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={new URL('/og.jpg', SITE.url).href} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SportsClub',
+    name: SITE.name,
+    alternateName: 'LAC Swimming',
+    url: SITE.url,
+    foundingDate: String(SITE.founded),
+    description: SITE.mission,
+    areaServed: ['Keller, TX', 'Flower Mound, TX', 'Justin, TX', 'The Colony, TX'],
+    sport: 'Swimming',
+  })} />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <Water mode={mode} />
+  <Header path={path} />
+  <main id="main" class="stage">
+    <slot />
+  </main>
+  <Footer />
+
+  <script>
+    /* nav: dropdown toggles, mobile drawer, scroll reveals */
+    (function () {
+      const burger = document.getElementById('burger');
+      const drawer = document.getElementById('drawer');
+      if (burger && drawer) {
+        burger.addEventListener('click', () => {
+          const open = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', String(!open));
+          burger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+          document.body.classList.toggle('locked', !open);
+          if (open) {
+            drawer.classList.remove('show');
+            setTimeout(() => { drawer.hidden = true; }, 320);
+          } else {
+            drawer.hidden = false;
+            requestAnimationFrame(() => drawer.classList.add('show'));
+          }
+        });
+        drawer.querySelectorAll('.dcaret').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            btn.closest('li')?.querySelector('.dsub')?.classList.toggle('open', !open);
+          });
+        });
+      }
+
+      /* caret opens the dropdown on click and on keyboard, hover handles the rest */
+      document.querySelectorAll<HTMLElement>('.navitem.kids').forEach((item) => {
+        const caret = item.querySelector('.caret') as HTMLButtonElement | null;
+        if (!caret) return;
+        caret.addEventListener('click', (e) => {
+          e.preventDefault();
+          const open = item.classList.toggle('open');
+          caret.setAttribute('aria-expanded', String(open));
+          document.querySelectorAll('.navitem.open').forEach((o) => {
+            if (o !== item) { o.classList.remove('open'); o.querySelector('.caret')?.setAttribute('aria-expanded', 'false'); }
+          });
+        });
+      });
+      document.addEventListener('click', (e) => {
+        if (!(e.target as HTMLElement).closest('.navitem.kids')) {
+          document.querySelectorAll('.navitem.open').forEach((o) => {
+            o.classList.remove('open');
+            o.querySelector('.caret')?.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        document.querySelectorAll('.navitem.open').forEach((o) => {
+          o.classList.remove('open');
+          o.querySelector('.caret')?.setAttribute('aria-expanded', 'false');
+        });
+        if (drawer && !drawer.hidden) (burger as HTMLElement)?.click();
+      });
+
+      /* reveals */
+      const rv = document.querySelectorAll('.rv');
+      if (!('IntersectionObserver' in window)) {
+        rv.forEach((el) => el.classList.add('in'));
+      } else {
+        const io = new IntersectionObserver((es) => {
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target as HTMLElement;
+            const sibs = Array.from(el.parentElement?.children ?? []).filter((c) => c.classList.contains('rv'));
+            el.style.transitionDelay = Math.min(sibs.indexOf(el), 6) * 65 + 'ms';
+            el.classList.add('in');
+            el.querySelectorAll<HTMLElement>('[data-count]').forEach(count);
+            setTimeout(() => { el.style.transition = 'none'; el.style.transitionDelay = '0s'; }, 1400);
+            io.unobserve(el);
+          });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+        rv.forEach((el) => io.observe(el));
+      }
+
+      function count(el: HTMLElement) {
+        const target = parseInt(el.dataset.count || '0', 10);
+        if (el.dataset.plain) { el.textContent = el.dataset.count!; return; }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = target.toLocaleString(); return; }
+        const st = performance.now(), dur = 1000;
+        (function step(n: number) {
+          const k = Math.min(1, (n - st) / dur);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3))).toLocaleString();
+          if (k < 1) requestAnimationFrame(step);
+        })(st);
+      }
+
+      /* markdown tables migrated from the old site need a scroll container */
+      document.querySelectorAll('.prose table').forEach((t) => {
+        if (t.parentElement?.classList.contains('tablewrap')) return;
+        const w = document.createElement('div');
+        w.className = 'tablewrap';
+        t.parentNode?.insertBefore(w, t);
+        w.appendChild(t);
+      });
+    })();
+  </script>
+</body>
+</html>

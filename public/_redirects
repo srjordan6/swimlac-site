@@ -1,0 +1,25 @@
+# Cloudflare Pages redirects. First match wins.
+
+# Member portal stays in GoMotion. The old sign-in URL keeps working.
+/Login5.jsp            https://www.gomotionapp.com/team/ntlac/Login5.jsp   302
+/Login.jsp             https://www.gomotionapp.com/team/ntlac/Login5.jsp   302
+
+# Legacy .jsp pages from the pre-2020 site, kept so old inbound links and
+# any remaining search results land somewhere real instead of a 404.
+/About.jsp             /page/about/about-lac      301
+/Home.jsp              /page/home                 301
+/Locations.jsp         /page/locations1           301
+/Coaches.jsp           https://www.gomotionapp.com/team/ntlac/page/system/coaches  302
+
+# Events calendar is rendered inside GoMotion.
+/EventsCurrent.jsp     https://www.gomotionapp.com/EventsCurrent.jsp   302
+
+# Convenience aliases people type or the club hands out verbally.
+/tryout                /page/join-lac/try-out--placement   301
+/tryouts               /page/join-lac/try-out--placement   301
+/lessons               /page/lac-swim-lessons/info-and-staff  301
+/schedule              /page/program-info         301
+/schedules             /page/program-info         301
+/join                  /page/join-lac             301
+/records               /page/events/team-records1 301
+/alumni                /page/alumni               301

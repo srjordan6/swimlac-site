@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { NAV } from '../consts';
+---
+<Base title="Page not found" description="That page is not on swimlac.org." path="/404" noindex={true}>
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow">Error 404</p>
+      <h1>That page is not in this pool.</h1>
+      <p style="color:var(--ash);max-width:46ch;margin-top:18px">
+        The link may be out of date. Everything on the site is one click away below.
+      </p>
+      <p style="margin-top:26px">
+        <a class="btn btn-hot" href="/page/home"><span class="lbl">Back to the home page</span><span class="lbl arrow">&rarr;</span></a>
+      </p>
+    </div>
+  </header>
+  <div class="pagebody">
+    <div class="wrap">
+      <div class="fourgrid">
+        {NAV.filter((n) => n.children).map((n) => (
+          <nav aria-label={n.label}>
+            <h2>{n.label}</h2>
+            <ul>
+              {n.children!.map((c) => (
+                <li><a href={c.href} {...(c.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{c.label}</a></li>
+              ))}
+            </ul>
+          </nav>
+        ))}
+      </div>
+    </div>
+  </div>
+</Base>
+<style>
+.fourgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px}
+.fourgrid h2{font-family:var(--f-mono);font-size:10px;font-weight:400;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--flare);margin:0 0 14px}
+.fourgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.fourgrid a{font-size:14px;color:#e6dcdd;opacity:.8;line-height:1.35;transition:opacity .22s ease,color .22s ease}
+.fourgrid a:hover{opacity:1;color:var(--flare)}
+</style>

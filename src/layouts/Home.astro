@@ -1,0 +1,20 @@
+---
+import Base from './Base.astro';
+import HomeContent from '../components/HomeContent.astro';
+import '../styles/home.css';
+const { path } = Astro.props as { path: string };
+---
+<Base
+  title="Home"
+  description="Lakeside Aquatic Club is a competitive swim team and swim lesson program serving Keller, Flower Mound, Justin and The Colony, Texas. Founded 1982."
+  path={path}
+  mode="hero"
+>
+  <HomeContent />
+</Base>
+<script>
+  const boot = () => document.body.classList.add('boot');
+  if (document.fonts?.ready) document.fonts.ready.then(() => setTimeout(boot, 50));
+  else setTimeout(boot, 220);
+  setTimeout(boot, 1500);
+</script>

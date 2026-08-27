@@ -1,0 +1,7 @@
+# While the rebuild is in staging every page also ships a noindex tag.
+# At go-live: set SITE.indexable = true in src/consts.ts and replace the
+# Disallow line below with "Allow: /".
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.swimlac.org/sitemap-index.xml

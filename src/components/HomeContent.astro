@@ -1,0 +1,144 @@
+---
+import { SITE, LOCATIONS, GOMOTION } from '../consts';
+
+const quickLinks = [
+  { label: 'About Us', href: '/page/about' },
+  { label: 'Join LAC Swim Team', href: '/page/join-lac/try-out--placement' },
+  { label: 'Swim Lessons', href: '/page/lac-swim-lessons/info-and-staff' },
+  { label: 'Fundraising', href: '/page/tu-money' },
+  { label: 'Events', href: GOMOTION.calendar, external: true },
+  { label: 'Safe Sport for Parents', href: 'https://www.usaswimming.org/swimmers-parents/parents/safe-sport-for-parents', external: true },
+];
+
+const lanes = [
+  { n: 'L1', title: 'Swim Lessons', who: 'Water safety and first strokes, taught in small groups at all four sites.', href: '/page/lac-swim-lessons/info-and-staff', cta: 'Find a class', lane: -2 },
+  { n: 'L2', title: 'Stroke School', who: 'For swimmers who can already swim and now want to race legally and efficiently.', href: '/page/join-lac/stroke-school1', cta: 'See the group', lane: -1 },
+  { n: 'L3', title: 'Junior Swim League', who: 'A first real season. Meets, relays, heat sheets, and a team behind the blocks.', href: '/page/join-lac/junior-swim-league', cta: 'Join JSL', lane: 0 },
+  { n: 'L4', title: 'Competitive Team', who: 'Year-round training groups working toward sectional and national cuts.', href: '/page/join-lac/competitive-team', cta: 'Book a tryout', lane: 1 },
+  { n: 'L5', title: 'Lakeside Fit', who: 'Adult and fitness swimming, coached, on the same schedule as the team.', href: '/page/join-lac/swim-fit', cta: 'See schedule', lane: 2 },
+];
+
+const sponsors = [
+  { label: 'Arena', href: 'https://www.arenasport.com/' },
+  { label: 'Xtreme Swim', href: 'https://www.xtremeswim.com/' },
+];
+---
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow fade">One team &middot; One vision &middot; One goal</p>
+    <h1>
+      <span class="ln"><span>Novice to</span></span>
+      <span class="ln"><span><em>Olympic.</em></span></span>
+      <span class="ln"><span>Same lane.</span></span>
+    </h1>
+    <p class="sub fade">
+      Competitive swim team and swim lessons in North Texas. Since {SITE.founded}, Lakeside Aquatic Club has carried
+      swimmers from a first lesson to national competition. <b>More than 1,300 swimmers.</b> Four cities.
+      One line on the bottom of the pool.
+    </p>
+    <div class="cta-row fade">
+      <a class="btn btn-hot" href="/page/join-lac/try-out--placement"><span class="lbl">Book a tryout</span><span class="lbl arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/page/lac-swim-lessons/how-to-register"><span class="lbl">Start swim lessons</span></a>
+      <span class="cta-note">TRYOUTS RUN YEAR-ROUND</span>
+    </div>
+  </div>
+  <div class="scrollcue fade"><span>Dive in</span><span class="bar"></span></div>
+</section>
+
+<!-- ============ QUICK LINKS (parity with the old home page) ============ -->
+<nav class="quick" aria-label="Quick links">
+  <div class="wrap">
+    <ul>
+      {quickLinks.map((q) => (
+        <li><a href={q.href} {...(q.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{q.label}<span aria-hidden="true">&rarr;</span></a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ PROOF ============ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="pgrid">
+      <div class="stat rv"><span class="n" data-count="1982" data-plain="1">1982</span><span class="k">Founded as a summer rec team</span></div>
+      <div class="stat rv"><span class="n"><span data-count="1300">0</span><u>+</u></span><span class="k">Swimmers on the roster</span></div>
+      <div class="stat rv"><span class="n" data-count="4">0</span><span class="k">Cities across DFW</span></div>
+      <div class="stat gold rv"><span class="n"><u>GOLD</u></span><span class="k">USA Swimming Gold Medal Club</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LANES ============ -->
+<section class="sec" id="programs">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Every swimmer gets a lane.<br />Pick yours.</h2>
+      <p>Five programs, one progression. Hover a lane to light it up in the water behind this page.</p>
+    </div>
+    <div class="lanes">
+      {lanes.map((l) => (
+        <a class="lane rv" href={l.href} data-lane={l.lane}>
+          <span class="num">{l.n}</span>
+          <h3>{l.title}</h3>
+          <span class="who">{l.who}</span>
+          <span class="go">{l.cta} &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section class="mission">
+  <div class="wrap rv">
+    <p class="eyebrow">LAC's mission</p>
+    <blockquote>{SITE.mission}</blockquote>
+    <a class="misslink" href="/page/about/about-lac">Read the full FAQ &rarr;</a>
+  </div>
+</section>
+
+<!-- ============ POOLS ============ -->
+<section class="sec" id="pools">
+  <div class="wrap">
+    <div class="sechead rv">
+      <h2>Four cities. One team.</h2>
+      <p>LAC trains across the north side of the Metroplex. Same coaching standard at every site.</p>
+    </div>
+    <div class="pools">
+      {LOCATIONS.map((l) => (
+        <div class="pool rv">
+          <span class="city">{l.city}</span>
+          <p class="fac">{l.facility}</p>
+          <div class="poollinks">
+            <a href={l.schedule}>Practice schedule &rarr;</a>
+            <a href={l.lessons}>Swim lessons &rarr;</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="sec" id="start">
+  <div class="wrap">
+    <div class="startbox rv">
+      <div>
+        <p class="eyebrow">Start here</p>
+        <h2>Book a tryout.</h2>
+        <p class="lede">A short swim with a coach, no cost, no commitment. You will leave knowing which lane your swimmer belongs in.</p>
+        <p class="tagline">ONE TEAM &middot; ONE VISION &middot; ONE GOAL</p>
+      </div>
+      <div class="startacts">
+        <a class="btn btn-hot" href="/page/join-lac/try-out--placement"><span class="lbl">Tryout and placement</span><span class="lbl arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href="/page/about/membership-cost"><span class="lbl">Membership cost</span></a>
+        <a class="btn btn-ghost" href={GOMOTION.calendar} target="_blank" rel="noopener noreferrer"><span class="lbl">Team calendar</span></a>
+      </div>
+    </div>
+    <div class="sponsors rv">
+      <span>Sponsors and partners</span>
+      {sponsors.map((s) => <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>)}
+    </div>
+  </div>
+</section>
