@@ -4,6 +4,7 @@ description: "Week by week practice schedules for Lakeside Aquatic Club groups i
 sourceUrl: "https://www.swimlac.org/page/program-info/flower-mnd-schedule"
 status: "migrated"
 calendar: "flower-mound"
+wide: true
 ---
 
 **Flower Mound / Lewisville Schedule**
@@ -14,8 +15,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Flower Mound Schedule Week of Aug 17, 2026
 
-|  | Monday 8/17 | Tuesday 8/18 | Wednesday 8/19 | Thursday 8/20 | Friday 8/21 | Saturday 8/22 | Sunday 8/23 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 8/17 | Tuesday 8/18 | Wednesday 8/19 | Thursday 8/20 | Friday 8/21 | Saturday 8/22 | Sunday 8/23 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NOTES |  |  | FM Open House | FM Open House |  |  |  |
 | NATIONAL | 6:45-7:20 pm @ CrossFit | 5:30-6:30 @ CAC - Group Meeting/ Dryland | 6:45-7:20 pm @ CrossFit | 7:30-8:00 pm @ CAC - Parent Meeting | 4:30-5:30 pm @ CAC - Swim | OFF |  |
 | National Prep | 6:30-7:30 pm @ CAC - Group Meeting/ Dryland | 6:30-7:30 pm @ CrossFit | 7:30-8:30 pm @ CAC - Swim | 6:30-7:30 pm @ CAC - Parent Meeting | 6:30-7:30 pm @ CAC - Swim | OFF |  |
@@ -38,8 +39,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Flower Mound Schedule Week of Aug 24, 2026
 
-|  | Monday 8/24 | Tuesday 8/25 | Wednesday 8/26 | Thursday 8/27 | Friday 8/28 | Saturday 8/29 | Sunday 8/30 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 8/24 | Tuesday 8/25 | Wednesday 8/26 | Thursday 8/27 | Friday 8/28 | Saturday 8/29 | Sunday 8/30 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NOTES |  |  |  |  | WAC Closed |  |  |
 | NATIONAL | 4:45-7:15 pm | 4:45-6:45pm | 4:45-6:45 pm | 5:45-7:15 | 6:30-7:30 pm @ CrossFit | Big Fish/Little Fish @ WAC |  |
 | National Prep | 4:45-6:45 pm | 4:45-6:45 pm | 4:45-7:00pm | 4:45-6:45 pm | OFF | Big Fish/Little Fish @ WAC |  |
@@ -62,8 +63,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Week of August 31
 
-|  | Monday 8/31 | Tuesday 9/1 | Wednesday 9/2 | Thursday 9/3 | Friday 9/4 | Saturday 9/5 | Sunday 9/6 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 8/31 | Tuesday 9/1 | Wednesday 9/2 | Thursday 9/3 | Friday 9/4 | Saturday 9/5 | Sunday 9/6 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NOTES |  | WAC Closed |  |  | Labor Day Weekend |  |  |
 | NATIONAL | 4:45-7:15 pm | 5-6:30 am 6:30-7:30 PM @ Crossfit | 4:45-6:45 pm | 5:15-7:15 | 4:45-6:45 pm | OFF |  |
 | National Prep | 4:45-6:45 pm | 5-6:30 am | 4:45-7:00pm | 4:45-6:45 pm | 4:45-7:00pm | OFF |  |
@@ -86,8 +87,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Week of Septemer 7
 
-|  | Monday 9/7 | Tuesday 9/8 | Wednesday 9/9 | Thursday 9/10 | Friday 9/11 | Saturday 9/12 | Sunday 9/13 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 9/7 | Tuesday 9/8 | Wednesday 9/9 | Thursday 9/10 | Friday 9/11 | Saturday 9/12 | Sunday 9/13 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NOTES | Closed Labor Day | WAC Closed |  | WAC Closed | WAC Closed |  |  |
 | NATIONAL | OFF | 5-6:30 am 6:30-7:30 PM @ Crossfit | 4:45-6:45 pm | 5-6:30 am | 6:30-7:30 pm @ CrossFit | 7-9 am |  |
 | National Prep | OFF | 5-6:30 am | 4:45-7:00pm | 5-6:30 am 6:45-7:20 pm @ CrossFit | OFF | 7-9 am |  |
@@ -109,8 +110,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Week of September 14
 
-|  | Monday 9/14 | Tuesday 9/15 | Wednesday 9/16 | Thursday 9/17 | Friday 9/18 | Saturday 9/19 | Sunday 9/20 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 9/14 | Tuesday 9/15 | Wednesday 9/16 | Thursday 9/17 | Friday 9/18 | Saturday 9/19 | Sunday 9/20 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  | WAC AM Open |  |  |
 | NOTES |  | WAC Closed |  |  | WAC Closed |  |  |
 | NATIONAL | 4:45-7:15 pm | 5-6:30 am 6:30-7:30 PM @ Crossfit | 4:45-6:45 pm | 5:00-6:30 am 5:15-7:15 | 5-6:30 am 6:30-7:30 PM @ Crossfit | 7-9 am |  |
@@ -133,8 +134,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Week of September 21
 
-|  | Monday 9/21 | Tuesday 9/22 | Wednesday 9/23 | Thursday 9/24 | Friday 9/25 | Saturday 9/26 | Sunday 9/27 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 9/21 | Tuesday 9/22 | Wednesday 9/23 | Thursday 9/24 | Friday 9/25 | Saturday 9/26 | Sunday 9/27 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  | WAC AM OPEN |  |  |
 | NOTES |  | WAC Closed |  |  | WAC Closed / |  |  |
 | NATIONAL | 4:45-7:15 pm | 5-6:30 am 6:30-7:30 PM Crossfit | 4:45-6:45 pm | 5:00-6:30 am 5:15-7:15 | 5:00-6:30 am Crossfit PM | 7-9 am |  |
@@ -157,8 +158,8 @@ Practice Facility Directions Click [HERE](/page/program-info/flower-mound)
 
 #### Flower Mound LAC Summer Schedule - Starts 8/24/26 - Mid October
 
-|  | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
-|---|---|---|---|---|---|---|---|
+| Group | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NATIONAL | 4:45-7:15 pm | 5-6:30 am PM Crossfit | 4:45-6:45 pm - Swim | 5:00-6:30 am 5:00-6:45 pm | 5:00-6:45 pm - Swim WR - 6:45 - 7:30 pm | 7-9 am |  |
 | National Prep | 4:45-6:45 pm | 5-6:30 am | 4:45-7:00pm | 5:00-6:30 am 4:45-6:45 pm | 6:45-8:30 pm OR Crossfit | 7-9 am |  |
 | Senior | 5:45 - 6:30 pm - WR Swim - 6:30 - 8:00 pm | 5-6:30 am PM Crossfit | 6:30-8:30 pm (8:15?) | 5:00-6:30 am 5:00-7:00 pm | 6:45 - 8:30 pm - Swim WR - 6:15 - 6:45 pm | 9-10:30 am |  |

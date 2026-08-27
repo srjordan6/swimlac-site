@@ -3,6 +3,7 @@ title: "Membership Cost"
 description: "Lakeside Aquatic Club fees: annual registration, USA Swimming dues, monthly dues by practice group, meet deposits, refunds and withdrawal."
 sourceUrl: "https://www.swimlac.org/page/about/membership-cost"
 status: "migrated"
+wide: true
 ---
 
 ## Membership Fees
@@ -55,7 +56,7 @@ All swimmers in **Bronze and above** are billed a **$75 deposit** to cover meet 
 
 ## Fees
 
-| | Practice Group | Age Range | Minimum Attendance | Monthly Dues | LAC Annual Fee | USA Swimming Registration | Volunteer Obligation (per family) |
+| Program | Practice Group | Age Range | Minimum Attendance | Monthly Dues | LAC Annual Fee | USA Swimming Registration | Volunteer Obligation (per family) |
 |---|---|---|---|---|---|---|---|
 | Stroke | Red 1 | 8 & under | 50% | $107 | $100 per family | None | None |
 | Stroke | Red 2 | 9-12 | 50% | $107 | $100 per family | None | None |

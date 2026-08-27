@@ -4,6 +4,7 @@ description: "Practice schedules for Lakeside Aquatic Club groups training in Th
 sourceUrl: "https://www.swimlac.org/page/program-info/the-colony-schedule"
 status: "migrated"
 calendar: "colony"
+wide: true
 ---
 
 **The Colony Schedule**
@@ -16,8 +17,8 @@ Practice Facility directions Click [HERE](/page/program-info/the-colony)
 
 #### The Colony Summer Schedule Week of May 25, 2026
 
-|  | Monday 5/25 | Tuesday 5/26 | Wednesday 5/27 | Thursday 5/28 | Friday 5/29 | Saturday 5/30 | Sunday 5/31 |
-|---|---|---|---|---|---|---|---|
+| Group | Monday 5/25 | Tuesday 5/26 | Wednesday 5/27 | Thursday 5/28 | Friday 5/29 | Saturday 5/30 | Sunday 5/31 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | NOTES |  |  |  |  |  |  |  |
 | NATIONAL | OFF | 9:15 AM-12:00 PM @ LOOS, 3:00-4:00 PM @ TCCF | 9:15 AM-12:00 PM @ LOOS, 7:15-8:45 PM @ Southlake | 9:15 AM-12:00 PM @ LOOS, 3:00-4:00 PM @ TCCF | 10:00 AM-1:00 PM @ NW | 8:45-11:00 AM @ NW | OFF |
 | NAT PREP | OFF | 6:00 AM-8:00 AM @ LOOS | 6:00 AM-8:00 AM @ LOOS,1:00-2:15 PM @TCCF | 6:00 AM-8:00 AM @ LOOS | 4-6 pm @ Highland Park High School | 12:30-2:30 pm @ Highland Park High School | OFF |
@@ -30,8 +31,8 @@ Practice Facility directions Click [HERE](/page/program-info/the-colony)
 
 #### The Colony Fall Schedule
 
-|  | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
-|---|---|---|---|---|---|---|
+| Group | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| --- | --- | --- | --- | --- | --- | --- |
 | NATIONAL | 4:45-7:00 PM | 6:30-8:30 AM @ TCAP, 4:45-7:00 PM Swim 7:30-8:15 PM @ TCCF | 4:45-7:00 PM | 6:30-8:30 AM @ TCAP, 4:45-7:00 PM Swim 7:30-8:15 PM @ TCCF | 4:45-7:00 PM, 7:30-8:15 PM @ TCCF | 6:30-9:00 AM |
 | NAT PREP | 6:30-8:30 AM @ TCAP, 4:45-7:00 PM | 4:45-7:00 PM | 4:45-7:00 PM | 4:45-7:00 PM | 4:45-7:00 PM | 6:30-8:30 AM |
 | SENIOR | 6:30-8:30 AM @ TCAP, 6:15-8:30 PM | 6:15-8:30 PM | 6:40-8:30 PM | 6:15-8:30 PM | 6:40-8:30 PM | 9:00-11:00 AM |

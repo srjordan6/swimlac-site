@@ -14,6 +14,9 @@ const pages = defineCollection({
     /** Show a live Google Calendar on this page. Value is a key from
      *  src/calendars.json, or "all" for the combined view. */
     calendar: z.string().optional(),
+    /** Drop the sidebar beside the content so a wide table gets the full
+     *  column. Use on pages whose table has more than about six columns. */
+    wide: z.boolean().optional(),
   }),
 });
 

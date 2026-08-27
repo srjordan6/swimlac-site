@@ -38,7 +38,7 @@ const isCalendar = page.id === 'events';
   </header>
 
   <div class="pagebody">
-    <div class="wrap layout">
+    <div class:list={["wrap", "layout", { wide: page.data.wide }]}>
       <article class="prose">
         {page.data.calendar && <Calendar site={page.data.calendar} />}
         {page.data.status === 'empty' && (
@@ -77,6 +77,11 @@ const isCalendar = page.id === 'events';
 <style>
 .subhead{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ash);margin-top:16px}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 268px;min-width:0;gap:clamp(28px,5vw,72px);align-items:start}
+/* a wide data table needs the whole column, so the section nav moves below it */
+.layout.wide{grid-template-columns:minmax(0,1fr)}
+.layout.wide .sidenav{position:static;margin-top:clamp(28px,4vw,48px);max-width:none}
+.layout.wide .sidenav ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px}
+.layout.wide .side-cta{width:auto;display:inline-flex;margin-top:20px}
 .sidenav{position:sticky;top:calc(var(--nav-h) + 28px);border:1px solid var(--line);
   background:rgba(13,1,4,.62);backdrop-filter:blur(10px);padding:22px 20px}
 .sidenav h2{font-family:var(--f-mono);font-size:10px;font-weight:400;letter-spacing:.2em;

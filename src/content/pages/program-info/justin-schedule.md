@@ -4,12 +4,13 @@ description: "Fall 2026 practice schedule for Lakeside Aquatic Club training gro
 sourceUrl: "https://www.swimlac.org/page/program-info/justin-schedule"
 status: "migrated"
 calendar: "justin"
+wide: true
 ---
 
 \*Changes may occur and will be communicated by your swimmer's coach.
 
-|  | MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY |
-|---|---|---|---|---|---|---|
+| Group | MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY |
+| --- | --- | --- | --- | --- | --- | --- |
 | NATIONAL | 4:30-7:30pm | 5:15-6:45am and 4:30-6:45pm | 4:30-7:30pm | 5:15-6:45am and 4:30- 6:45pm | 4:30 - 6:30pm | 6:45-9:45am |
 | NAT PREP | 4:30-6:45pm | 4:30-7:00pm | 5:15-6:45am and 4:30-6:45pm | 4:30-7:00pm | 4:30-6:30pm | 6:45-9:00am |
 | SENIOR | 4:30-6:15pm | 5:00-7:00pm | 5:15-6:45am and 4:30-6:15pm | 5:00-7:00pm | 4:30 - 6:30pm | 6:45-8:45am |

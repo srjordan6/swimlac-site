@@ -4,6 +4,7 @@ description: "Practice times for LAC Keller groups, including temporary pool loc
 sourceUrl: "https://www.swimlac.org/page/program-info/keller-schedule"
 status: "migrated"
 calendar: "keller"
+wide: true
 ---
 
 Temporary Locations:
@@ -129,24 +130,24 @@ WEEK 2 - AUGUST 24
 | Black 1 | OFF | 4:30-5:15 pm @ BF | OFF | 4:30-5:15 pm @ BF | 5:15-6:00 pm @ BF | OFF |
 | Black 2 | OFF | 5:15-6:00 pm @ BF | OFF | 5:15-6:00 pm @ BF | 5:15-6:00 pm @ BF | OFF |
 
-| Short Course Schedule - October to March once we get back into the Keller ISD pool |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |
-|  | size | GROUP | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
-|  | 36 | National 1 | 5:00-6:30 am 4:30-7:15 pm | 4:30-6:30 pm | 4:30-7:15 pm | 5:00-6:30 am 4:30-6:30 pm | 4:30-6 pm | 6:45-9:00 am |
-|  | 22 | Nat Prep | 5:00-6:30 am 4:45-7:15 pm | 4:30-6:30 pm | 4:45-7:15 pm | 4:30-6:30 pm | 4:45-7:00 pm | 6:45-9:00 am |
-|  | 22 | Senior | 6:30-8:30 pm | 6:30-8:30 pm | 6:30-8:30 pm | 6:30-8:30 pm | 6:00-8:00 pm | 9:00-11:00 am |
-|  | 18 | Senior Prep | 6:00-8:00 pm | 6:30-8:30 pm | 6:00-8:00 pm | 6:30-8:30 pm | 6:30-8:00 pm | 6:45-8:30 am |
-|  | 14 | AGS | 4:30-6:30 pm | 6:00 to 8 pm | 4:30-6:30 pm | 5:00-7:00 pm | 6:00 to 8 pm | 7:30-9:30 am |
-|  | 15 | Gold 1 | 6:30-8:00 pm | 6-7:30 pm | 6:30-8:00 pm | 6-7:30 pm | OFF | 9:00-10:30 am |
-|  | 21 | Gold 2 | 6:30-8:00 pm | OFF | 6:30-8:00 pm | 7-8:30 pm | 4:30-6:00 pm | 9:30-11:00 am |
-|  | 19 | Silver 1 | 4:30-5:45 pm | 4:30-5:45 pm | OFF | 4:30-5:45 pm | OFF | 8:30-9:45 am |
-|  | 26 | Silver 2 | OFF | 5:45-7:00 pm | 4:30-5:45 pm | OFF | 6:45-8:00 pm | 9:45-11:00 am |
-|  | 26 | Bronze 1 | OFF | 4:30-5:30 pm | OFF | 4:30-5:30 pm | 4:30 to 5:30 pm | 9:00-10:00 am |
-|  | 21 | Bronze 2 | 4:30-5:30 pm | OFF | 4:30-5:30 pm | OFF | 4:30 to 5:30 pm | 10:00-11:00 am |
-|  | Bronze 3 | Bronze 3 | 7:00-8:00 pm | 7:00-8:00 pm | OFF | 7:00-8:00 pm | OFF | 7:00-8:00 am |
-|  |  | Lakeside Fit | 7:00-8:15 pm | OFF | 7:15-8:30 pm | 7:00-8:15 pm | OFF | OFF |
-|  | 31 | Black 1 | OFF | 5:30 to 6:15 pm | OFF | 5:30 to 6:15 pm | 5:30 to 6:15 pm | OFF |
-|  | 20 | Black 2 | OFF | 6:15 to 7 pm | OFF | 6:15 to 7 pm | 5:30 to 6:15 pm | OFF |
-|  | 27 | Red 1 | 5:30-6:15 pm | OFF | 5:30 to 6:15 pm | OFF | 6:15 to 7 pm | OFF |
-|  | 26 | Red 2 | 6:15-7:00 pm | OFF | 6:15 to 7 pm | OFF | 6:15 to 7 pm | OFF |
+#### Short Course Schedule - October to March once we get back into the Keller ISD pool
+
+| size | Group | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 36 | National 1 | 5:00-6:30 am 4:30-7:15 pm | 4:30-6:30 pm | 4:30-7:15 pm | 5:00-6:30 am 4:30-6:30 pm | 4:30-6 pm | 6:45-9:00 am |
+| 22 | Nat Prep | 5:00-6:30 am 4:45-7:15 pm | 4:30-6:30 pm | 4:45-7:15 pm | 4:30-6:30 pm | 4:45-7:00 pm | 6:45-9:00 am |
+| 22 | Senior | 6:30-8:30 pm | 6:30-8:30 pm | 6:30-8:30 pm | 6:30-8:30 pm | 6:00-8:00 pm | 9:00-11:00 am |
+| 18 | Senior Prep | 6:00-8:00 pm | 6:30-8:30 pm | 6:00-8:00 pm | 6:30-8:30 pm | 6:30-8:00 pm | 6:45-8:30 am |
+| 14 | AGS | 4:30-6:30 pm | 6:00 to 8 pm | 4:30-6:30 pm | 5:00-7:00 pm | 6:00 to 8 pm | 7:30-9:30 am |
+| 15 | Gold 1 | 6:30-8:00 pm | 6-7:30 pm | 6:30-8:00 pm | 6-7:30 pm | OFF | 9:00-10:30 am |
+| 21 | Gold 2 | 6:30-8:00 pm | OFF | 6:30-8:00 pm | 7-8:30 pm | 4:30-6:00 pm | 9:30-11:00 am |
+| 19 | Silver 1 | 4:30-5:45 pm | 4:30-5:45 pm | OFF | 4:30-5:45 pm | OFF | 8:30-9:45 am |
+| 26 | Silver 2 | OFF | 5:45-7:00 pm | 4:30-5:45 pm | OFF | 6:45-8:00 pm | 9:45-11:00 am |
+| 26 | Bronze 1 | OFF | 4:30-5:30 pm | OFF | 4:30-5:30 pm | 4:30 to 5:30 pm | 9:00-10:00 am |
+| 21 | Bronze 2 | 4:30-5:30 pm | OFF | 4:30-5:30 pm | OFF | 4:30 to 5:30 pm | 10:00-11:00 am |
+| Bronze 3 | Bronze 3 | 7:00-8:00 pm | 7:00-8:00 pm | OFF | 7:00-8:00 pm | OFF | 7:00-8:00 am |
+|  | Lakeside Fit | 7:00-8:15 pm | OFF | 7:15-8:30 pm | 7:00-8:15 pm | OFF | OFF |
+| 31 | Black 1 | OFF | 5:30 to 6:15 pm | OFF | 5:30 to 6:15 pm | 5:30 to 6:15 pm | OFF |
+| 20 | Black 2 | OFF | 6:15 to 7 pm | OFF | 6:15 to 7 pm | 5:30 to 6:15 pm | OFF |
+| 27 | Red 1 | 5:30-6:15 pm | OFF | 5:30 to 6:15 pm | OFF | 6:15 to 7 pm | OFF |
+| 26 | Red 2 | 6:15-7:00 pm | OFF | 6:15 to 7 pm | OFF | 6:15 to 7 pm | OFF |

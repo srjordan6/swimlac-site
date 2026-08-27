@@ -154,13 +154,39 @@ const block = noindex || !SITE.indexable;
         })(st);
       }
 
-      /* markdown tables migrated from the old site need a scroll container */
+      /* markdown tables migrated from the old site need a scroll container,
+         plus a fade on the right edge only when there is actually more to see */
       document.querySelectorAll('.prose table').forEach((t) => {
-        if (t.parentElement?.classList.contains('tablewrap')) return;
-        const w = document.createElement('div');
-        w.className = 'tablewrap';
-        t.parentNode?.insertBefore(w, t);
-        w.appendChild(t);
+        let w = t.parentElement;
+        if (!w?.classList.contains('tablewrap')) {
+          w = document.createElement('div');
+          w.className = 'tablewrap';
+          t.parentNode?.insertBefore(w, t);
+          w.appendChild(t);
+        }
+        const wrap = w as HTMLElement;
+        const sync = () => {
+          const over = wrap.scrollWidth - wrap.clientWidth;
+          wrap.dataset.scrolls = over > 4 ? '1' : '0';
+          wrap.dataset.end = over > 4 && wrap.scrollLeft >= over - 4 ? '1' : '0';
+        };
+        /* a header row of nothing but blanks is a migration artefact, not a
+           header: drop it rather than render an empty dark bar */
+        const heads = Array.from(t.querySelectorAll('thead th'));
+        if (heads.length && heads.every((h) => !h.textContent!.trim())) {
+          t.querySelector('thead')?.remove();
+        }
+        /* mute the OFF cells so the practice times carry the page */
+        t.querySelectorAll('tbody td').forEach((td) => {
+          if (/^(off|no practice|none|n\/a|-)$/i.test(td.textContent!.trim())) {
+            td.setAttribute('data-off', '');
+          }
+        });
+
+        sync();
+        wrap.addEventListener('scroll', sync, { passive: true });
+        addEventListener('resize', sync, { passive: true });
+        if ('ResizeObserver' in window) new ResizeObserver(sync).observe(wrap);
       });
     })();
   </script>
