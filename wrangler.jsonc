@@ -3,9 +3,14 @@
   "name": "swimlac-site",
   "compatibility_date": "2026-08-27",
 
-  // Static site. No Worker script, Cloudflare serves ./dist directly.
+  // The Worker only handles /api/*. Everything else is served straight from
+  // ./dist as a static asset, so the site stays as fast as it was.
+  "main": "./worker/index.ts",
+
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
 
     // The old GoMotion URLs have NO trailing slash (/page/about/about-lac).
     // "drop-trailing-slash" serves them at exactly that path and redirects any
@@ -15,5 +20,7 @@
 
     // Serve dist/404.html on a miss instead of a bare Cloudflare error.
     "not_found_handling": "404-page"
-  }
+  },
+
+  "observability": { "enabled": true }
 }

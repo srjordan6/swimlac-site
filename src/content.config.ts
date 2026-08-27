@@ -11,6 +11,9 @@ const pages = defineCollection({
     description: z.string().optional(),
     sourceUrl: z.string().url().optional(),
     status: z.enum(['migrated', 'empty', 'gated', 'partial']).default('migrated'),
+    /** Show a live Google Calendar on this page. Value is a key from
+     *  src/calendars.json, or "all" for the combined view. */
+    calendar: z.string().optional(),
   }),
 });
 

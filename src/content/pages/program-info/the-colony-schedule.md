@@ -3,6 +3,7 @@ title: "The Colony Schedule"
 description: "Practice schedules for Lakeside Aquatic Club groups training in The Colony, including the summer week grid and the current fall schedule."
 sourceUrl: "https://www.swimlac.org/page/program-info/the-colony-schedule"
 status: "migrated"
+calendar: "colony"
 ---
 
 **The Colony Schedule**

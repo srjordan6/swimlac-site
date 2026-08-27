@@ -1,0 +1,32 @@
+[
+  {
+    "key": "colony",
+    "label": "The Colony",
+    "id": "",
+    "note": "Eastside Aquatic Center"
+  },
+  {
+    "key": "flower-mound",
+    "label": "Flower Mound",
+    "id": "",
+    "note": "Westside Aquatic Center, Lewisville"
+  },
+  {
+    "key": "justin",
+    "label": "Justin",
+    "id": "",
+    "note": "Northwest ISD natatorium"
+  },
+  {
+    "key": "keller",
+    "label": "Keller",
+    "id": "",
+    "note": "Keller ISD natatorium and The Keller Pointe"
+  },
+  {
+    "key": "club",
+    "label": "Club-wide",
+    "id": "",
+    "note": "Meets, banquets, board meetings, registration deadlines, closures"
+  }
+]

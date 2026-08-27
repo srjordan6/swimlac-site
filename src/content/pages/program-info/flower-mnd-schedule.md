@@ -3,6 +3,7 @@ title: "Flower Mound Schedule"
 description: "Week by week practice schedules for Lakeside Aquatic Club groups in Flower Mound and Lewisville, plus the standing schedule starting 8/24/26."
 sourceUrl: "https://www.swimlac.org/page/program-info/flower-mnd-schedule"
 status: "migrated"
+calendar: "flower-mound"
 ---
 
 **Flower Mound / Lewisville Schedule**

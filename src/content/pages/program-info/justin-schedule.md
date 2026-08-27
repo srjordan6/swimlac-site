@@ -3,6 +3,7 @@ title: "Justin Fall Schedule 2026"
 description: "Fall 2026 practice schedule for Lakeside Aquatic Club training groups at the Justin location, by group and day of the week."
 sourceUrl: "https://www.swimlac.org/page/program-info/justin-schedule"
 status: "migrated"
+calendar: "justin"
 ---
 
 \*Changes may occur and will be communicated by your swimmer's coach.

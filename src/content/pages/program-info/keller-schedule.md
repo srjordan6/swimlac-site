@@ -3,6 +3,7 @@ title: "Keller Schedule"
 description: "Practice times for LAC Keller groups, including temporary pool locations, the weekly transition schedule and the short course schedule."
 sourceUrl: "https://www.swimlac.org/page/program-info/keller-schedule"
 status: "migrated"
+calendar: "keller"
 ---
 
 Temporary Locations:

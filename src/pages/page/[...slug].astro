@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { crumbsFor, navLabelFor, siblingsFor, GOMOTION } from '../../consts';
+import Calendar from '../../components/Calendar.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
@@ -39,6 +40,7 @@ const isCalendar = page.id === 'events';
   <div class="pagebody">
     <div class="wrap layout">
       <article class="prose">
+        {page.data.calendar && <Calendar site={page.data.calendar} />}
         {page.data.status === 'empty' && (
           <p class="notice">
             This page had no static copy on the old site.

@@ -100,6 +100,17 @@ which are linked from body copy but were never in the nav.
 
 ---
 
+## Practice calendars
+
+Five Google Calendars, one per site plus one club-wide, read by the Worker at
+`/api/calendar` and rendered in the site's own design. Coaches maintain them
+from their phones; no deploy, no developer.
+
+Setup is in [`docs/CALENDARS.md`](docs/CALENDARS.md). Until the calendar IDs in
+`src/calendars.json` are filled in and `GOOGLE_CALENDAR_KEY` is set as a
+Cloudflare secret, the schedule pages fall back to their printed tables, so a
+half-finished setup never breaks the site.
+
 ## Editing content
 
 Non-developers: see [`docs/EDITING.md`](docs/EDITING.md).
