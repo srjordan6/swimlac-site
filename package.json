@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "verify": "node scripts/verify.mjs",
-    "ci": "npm run build && npm run verify"
+    "ci": "npm run build && npm run verify",
+    "deploy:hook": "node scripts/trigger-deploy.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

@@ -6,3 +6,4 @@ dist/
 .env.production
 npm-debug.log*
 .wrangler/
+.deploy-hook
